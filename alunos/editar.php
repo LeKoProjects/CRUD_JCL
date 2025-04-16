@@ -18,11 +18,11 @@
         $result = pg_query($database, $sql);
 
         if ($result) {
-            pg_query($database, "DELETE FROM alunos_cursos WHERE aluno_id = '$aluno_id'");
+            pg_query($database, "DELETE FROM alunos_cursos WHERE aluno_id = '$id'");
 
             foreach ($cursos as $curso_id) {
                 $curso_id = pg_escape_string($database, $curso_id);
-                pg_query($database, "INSERT INTO alunos_cursos (aluno_id, curso_id) VALUES ('$aluno_id', '$curso_id')");
+                pg_query($database, "INSERT INTO alunos_cursos (aluno_id, curso_id) VALUES ('$id', '$curso_id')");
             }
 
             $_SESSION['msg'] = "Aluno atualizado e cursos associados com sucesso!";
