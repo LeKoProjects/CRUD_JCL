@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRIAR ALUNO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
     <h1>CRIAR ALUNO</h1>
@@ -44,10 +46,11 @@
                 echo "<tr><td colspan='2'>Nenhum curso encontrado.</td></tr>";
             }
         ?>
-
+        <br><br>
         <button type="submit" name="criar_aluno">Criar Aluno</button>
     </form>
 
+    <br><br>
     <h2>Lista de Alunos</h2>
     <table border="1">
         <tr>
